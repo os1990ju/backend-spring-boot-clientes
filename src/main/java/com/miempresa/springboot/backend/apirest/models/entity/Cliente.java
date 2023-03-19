@@ -14,9 +14,10 @@ public class Cliente implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(length = 50)
+    @Column(length = 50, nullable = false)
     private String nombre;
     private String apellido;
+    @Column(length = 50, unique=true)
     private String email;
     @Column(name="create_at")
     @Temporal(TemporalType.DATE) //transforma la fecha dejava a date en sql

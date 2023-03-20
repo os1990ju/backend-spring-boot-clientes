@@ -16,8 +16,9 @@ public class Cliente implements Serializable {
     private Long id;
     @Column(length = 50, nullable = false)
     private String nombre;
+    @Column(nullable =false)
     private String apellido;
-    @Column(length = 50, unique=true)
+    @Column(length = 50, unique=true, nullable = false)
     private String email;
     @Column(name="create_at")
     @Temporal(TemporalType.DATE) //transforma la fecha dejava a date en sql

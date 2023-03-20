@@ -48,7 +48,7 @@ public class ClienteRestController {
     public ResponseEntity<?> create(@RequestBody Cliente cliente){
 //        intenta guradar
         Cliente clienteNew = null;
-        Map<String,Object> response = new HashMap<String,Object>();
+        Map<String,Object> response = new HashMap<>();
         try{
             clienteNew = clienteService.save(cliente);
         }catch(DataAccessException e){
